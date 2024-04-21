@@ -6,7 +6,7 @@ internal class Program
         Monday = 1,
         Tuesday = 2,
         Wendsday = 3,
-        Thursday = 4,
+        Thursday =4,
         Friday = 5,
         Saturday = 6,
         Sunday = 7,
@@ -271,13 +271,13 @@ internal class Program
         //====================================
 
         //2-44
-        //Console.WriteLine($"星期三列舉常數值:{(int)Weekdays.Wendsday}");
-        //Console.WriteLine($"星期五列舉常數值:{(int)Weekdays.Friday}");
-        //Console.Read();
+        Console.WriteLine($"星期三列舉常數值:{(int)Weekdays.Wendsday}");
+        Console.WriteLine($"星期五列舉常數值:{(int)Weekdays.Friday}");
+        Console.Read();
 
         //3-10
-        double expIncome = 0; //擊敗怪物數量
-        double expBonus = 0; //經驗加成
+        double expIncome=0; //擊敗怪物數量
+        double expBonus=0; //經驗加成
         bool classChange = false; //能否轉職
         double lvlUp = 0;//等級提高
         int stage = 0;//經驗加成倍率
@@ -286,19 +286,19 @@ internal class Program
         Console.WriteLine();
         if (expIncome > 0) //檢查經驗值是否大於零
         {
-            stage = (expIncome <= 1000 ? 1 : (expIncome <= 2000 ? 2 : (expIncome <= 3000 ? 3 : (expIncome <= 4000 ? 4 : (expIncome <= 5000 ? 5 : 6)))));
+            stage = (expIncome <= 1000?1:(expIncome <= 2000?2:(expIncome <= 3000?3:(expIncome<=4000?4:(expIncome<=5000?5:6)))));
         }
         else
         {
             Console.WriteLine("你沒獲得任何經驗值");
-
+            
         }
         switch (stage)
         {
             case 1:
                 expBonus = 0;
-                lvlUp = (expIncome * (1 + expBonus)) / 50;
-                classChange = (lvlUp >= 100 ? true : false);
+                lvlUp = (expIncome*(1+expBonus)) / 50;
+                classChange = (lvlUp>=100?true:false);
                 break;
             case 2:
                 expBonus = 0.15;
@@ -322,7 +322,7 @@ internal class Program
                 break;
             case 6:
                 expBonus = 0.8;
-                lvlUp = (expIncome * (1 + expBonus)) / 50;
+                lvlUp =(expIncome * (1 + expBonus)) / 50;
                 classChange = (lvlUp >= 100 ? true : false);
                 break;
             default:
@@ -331,7 +331,7 @@ internal class Program
         }
         Console.WriteLine($"\n == 你一共擊敗{expIncome:N0}隻怪物");
         Console.WriteLine($"\n == 獲得階級 {stage} 的獎勵經驗倍率 x{expBonus}");
-        Console.WriteLine($"\n == 獲得 {expIncome} * {expBonus} = {expIncome * (1 + expBonus):N1} 經驗值");
+        Console.WriteLine($"\n == 獲得 {expIncome} * {expBonus} = {expIncome*(1+expBonus):N1} 經驗值");
         Console.WriteLine($"\n == 總共能提升{lvlUp:F0}等級");
         if (classChange == true)
         {
@@ -339,7 +339,7 @@ internal class Program
         }
         else
         {
-            Console.WriteLine($"\n == 離轉職還需要 {1000 - lvlUp:F0} 等級");
+            Console.WriteLine($"\n == 離轉職還需要 {1000-lvlUp:F0} 等級");  
         }
 
 
