@@ -271,9 +271,9 @@ internal class Program
         //====================================
 
         //2-44
-        Console.WriteLine($"星期三列舉常數值:{(int)Weekdays.Wendsday}");
-        Console.WriteLine($"星期五列舉常數值:{(int)Weekdays.Friday}");
-        Console.Read();
+        //Console.WriteLine($"星期三列舉常數值:{(int)Weekdays.Wendsday}");
+        //Console.WriteLine($"星期五列舉常數值:{(int)Weekdays.Friday}");
+        //Console.Read();
 
         //3-10
         double expIncome=0; //擊敗怪物數量
@@ -341,6 +341,7 @@ internal class Program
         {
             Console.WriteLine($"\n == 離轉職還需要 {1000-lvlUp:F0} 等級 ");  
         }
+        Console.Read();
 
 
 
