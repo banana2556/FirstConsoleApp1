@@ -339,7 +339,7 @@ internal class Program
         }
         else
         {
-            Console.WriteLine($"\n == 離轉職還需要 {1000-lvlUp:F0} 等級");  
+            Console.WriteLine($"\n == 離轉職還需要 {1000-lvlUp:F0} 等級 ");  
         }
 
 
